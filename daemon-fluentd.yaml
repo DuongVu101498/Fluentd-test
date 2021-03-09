@@ -38,6 +38,7 @@ spec:
       volumes:
       - name: log-volume
         hostPath: /var/log/k8s/
+        type: DirectoryOrCreate
       - name: config
         configMap:
          name: fluentd-config
