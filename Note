@@ -10,3 +10,4 @@ mkdir /var/log/k8s/
 kubectl apply -f /root/log-generator/log-server.yaml
 kubectl apply -f /root/Fluentd-test/td-agent-configmap.yaml
 kubectl apply -f /root/Fluentd-test/daemon-fluentd.yaml
+dockerfile nguon: https://github.com/fluent/fluentd-docker-image/blob/master/v1.10/alpine/fluent.conf
