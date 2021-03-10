@@ -37,11 +37,12 @@ spec:
       terminationGracePeriodSeconds: 30
       volumes:
       - name: log-volume
-        hostPath: /var/log/k8s/
-        type: DirectoryOrCreate
+        hostPath:
+          path: /var/log/k8s/
+          type: DirectoryOrCreate
       - name: config
-        configMap:
-         name: fluentd-config
-         items:
-         - key: "fluent.conf"
-           path: "fluent.conf"
+        hostPath:
+          path: /fluentd/etc/
+          type: DirectoryOrCreate
+      
+        
