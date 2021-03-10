@@ -1,0 +1,12 @@
+Docker:
+The following instructions create a layer: RUN , COPY , ADD
+
+Github:
+github pass: 1a01269ef45e24dee6863af72e095c1bd7654653
+
+git clone https://github.com/DuongVu101498/log-generator.git
+git clone https://github.com/DuongVu101498/Fluentd-test.git
+mkdir /var/log/k8s/
+kubectl apply -f /root/log-generator/log-server.yaml
+kubectl apply -f /root/Fluentd-test/td-agent-configmap.yaml
+kubectl apply -f /root/Fluentd-test/daemon-fluentd.yaml
