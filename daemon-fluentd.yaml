@@ -22,12 +22,6 @@ spec:
       containers:
       - name: fluentd-test
         image: fluent/fluentd:edge
-        resources:
-          limits:
-            memory: 200Mi
-          requests:
-            cpu: 100m
-            memory: 200Mi
         volumeMounts:
         - name: log-volume
           mountPath: /var/log/k8s/
@@ -44,5 +38,3 @@ spec:
         hostPath:
           path: /fluentd/etc/
           type: DirectoryOrCreate
-      
-        
