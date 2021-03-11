@@ -1,4 +1,4 @@
-FROM ubuntu:20.04
+FROM ruby:3
 RUN sudo apt-get install ruby-full
 RUN sudo gem install fluentd -v "~> 0.12.0" --no-ri --no-rdoc  && \ 
  sudo mkdir /etc/fluent/myconfig/
