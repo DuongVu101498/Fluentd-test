@@ -4,5 +4,5 @@ RUN apt update && \
  echo "Y" - > apt install ruby-dev && \
  echo "Y" - > gem install fluentd -v "~> 0.12.0" --no-ri --no-rdoc  
 RUN mkdir -p /etc/fluent/myconfig/ 
-COPY ./fluent.conf /etc/fluent/myconfig/
+COPY ~/fluent.conf /etc/fluent/myconfig/
 CMD ["fluentd",  "-c", "/etc/fluent/myconfig/fluent.conf"]
