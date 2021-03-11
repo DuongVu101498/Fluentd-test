@@ -1,26 +1,35 @@
+mail pass cHZ$GvSt99RcVw9
+
 Docker:
 The following instructions create a layer: RUN , COPY , ADD
+git clone https://github.com/DuongVu101498/Fluentd-test.git
+cd Fluentd-test
+docker build . -t laotacluong/my-fluentd
+docker login
+docker push laotacluong/my-fluentd:v1
+docker build - < Dockerfile
 
 Github:
 github pass: 1a01269ef45e24dee6863af72e095c1bd7654653
 
-
 git clone https://github.com/DuongVu101498/log-generator.git
 git clone https://github.com/DuongVu101498/Fluentd-test.git
-for each node:
-{
-git clone https://github.com/DuongVu101498/Fluentd-test.git
 mkdir /var/log/k8s/
-mkdir /fluentd/
-mkdir /fluentd/etc/
-cp Fluentd-test/fluent.conf /fluentd/etc/
-}
 kubectl apply -f /root/log-generator/log-server.yaml
+mkdir -p /fluentd/etc/
+touch /fluentd/etc/myapp-log.log
+----cp /root/Fluentd-test/fluent.conf /fluentd/etc/
 kubectl apply -f /root/Fluentd-test/daemon-fluentd.yaml
 
-kubectl node-shell node01
 kubectl get pod --namespace=kube-system
+cat /fluentd/etc/myapp-log
 
-build fluentd: 
-sudo apt-get install build-essentail patch (https://stackoverflow.com/questions/40154671/error-installing-nio4r)
-sudo gem install nio4r -v '2.5.7' --source 'https://rubygems.org/'
+ls /var/log/k8s
+cat  /var/log/k8s/example1.log
+dockerfile nguon: https://github.com/fluent/fluentd-docker-image/blob/master/v1.10/alpine/fluent.conf
+
+ 
+kubectl: 
+kubectl get pod fluentd-test-w7xtr  --namespace=kube-system -o yaml
+kubectl get pod -o yaml
+kubectl exec counter -- /bin/bash ls /var/log/k8s
