@@ -23,3 +23,4 @@ kubectl get pod --namespace=kube-system
 
 build fluentd: 
 sudo apt-get install build-essentail patch (https://stackoverflow.com/questions/40154671/error-installing-nio4r)
+sudo gem install nio4r -v '2.5.7' --source 'https://rubygems.org/'
