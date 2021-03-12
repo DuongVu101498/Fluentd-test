@@ -1,6 +1,7 @@
 FROM ubuntu:20.04
 RUN apt update && \
- echo "Y" - > apt-get install ruby-full && \
+ apt-get -y install ruby && \
+ apt-get install -y ruby-dev && \
  apt install build essential && \
  echo "Y" - > gem install fluentd
 RUN mkdir -p /etc/fluent/myconfig/  
