@@ -31,3 +31,7 @@ spec:
         hostPath:
           path: /var/log/k8s/
           type: DirectoryOrCreate
+      - name: output
+        hostPath:
+          path: /fluentd/etc/
+          type: DirectoryOrCreate
