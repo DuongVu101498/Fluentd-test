@@ -21,7 +21,7 @@ spec:
         effect: NoSchedule
       containers:
       - name: fluentd-test
-        image: laotacluong/my-fluentd:latest
+        image: laotacluong/my-fluentd:v1
         volumeMounts:
         - name: log-volume
           mountPath: /var/log/k8s/
