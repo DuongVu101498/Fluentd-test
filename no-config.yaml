@@ -25,6 +25,8 @@ spec:
         volumeMounts:
         - name: log-volume
           mountPath: /var/log/k8s/
+        - name: output
+          mountPath: /fluentd/etc/
       terminationGracePeriodSeconds: 30
       volumes:
       - name: log-volume
