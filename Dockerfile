@@ -4,7 +4,7 @@ RUN apt update && \
  apt-get -y install ruby && \
  apt-get install -y ruby-dev 
  #apt install build essential && \
-RUN echo "Y" - > gem install fluentd
+RUN gem install fluentd
 RUN mkdir -p /etc/fluent/myconfig/  
 RUN mkdir -p /fluentd/etc/ 
 RUN touch /fluentd/etc/myapp-log.log
