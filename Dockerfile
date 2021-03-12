@@ -1,5 +1,6 @@
 FROM ubuntu:20.04
 RUN apt update && \
+ apt-get update && \
  apt-get -y install ruby && \
  apt-get install -y ruby-dev && \
  apt install build essential && \
