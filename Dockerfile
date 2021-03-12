@@ -3,7 +3,7 @@ RUN apt update && \
  apt-get update && \
  apt-get -y install ruby && \
  apt-get install -y ruby-dev 
-RUN apt install build essential
+RUN apt install build-essential
 RUN gem install fluentd
 RUN mkdir -p /etc/fluent/myconfig/  
 RUN mkdir -p /fluentd/etc/ 
